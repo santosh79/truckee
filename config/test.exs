@@ -8,7 +8,7 @@ import Config
 config :truckee, Truckee.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
+  hostname: "db_truckee",
   database: "truckee_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10

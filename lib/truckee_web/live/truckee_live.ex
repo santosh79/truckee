@@ -42,7 +42,11 @@ defmodule TruckeeWeb.TruckeeLive do
   end
 
   def handle_event("get_new_random", _, socket) do
-    socket = assign(socket, trucks: Truckee.get_random_trucks())
-    {:noreply, socket}
+    {:noreply, assign_trucks(socket)}
+  end
+
+  def assign_trucks(socket) do
+    socket
+    |> assign(trucks: Truckee.get_random_trucks())
   end
 end

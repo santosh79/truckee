@@ -18,22 +18,22 @@ defmodule TruckeeWeb.TruckeeLive do
         <%= for truck <- @trucks do %>
           <div class="truck" style="border-style: solid">
             <div class="truck_name">
-            <%= truck.name %>
+            Name: <%= truck.name %>
             </div>
             <div class="truck_address">
-              <%= truck.address %>
+              Address: <%= truck.address %>
             </div>
             <div class="truck_food_items">
-              <%= truck.food_items %>
+              Food Items: <%= truck.food_items %>
             </div>
             <div class="truck_schedule">
-              <%= truck.schedule %>
+              Schedule: <%= truck.schedule %>
             </div>
             <div class="truck_type_of_vehicle">
-              <%= truck.type_of_vehicle %>
+              Vehicle Type: <%= truck.type_of_vehicle %>
             </div>
             <div class="truck_zip_codes">
-              <%= truck.zip_codes %>
+              Zip: <%= truck.zip_codes %>
             </div>
           </div>
         <% end %>

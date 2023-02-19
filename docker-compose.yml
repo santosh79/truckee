@@ -1,0 +1,17 @@
+services:
+  server:
+    volumes:
+      - .:/app
+    working_dir: /app
+    image: elixir:1.14.3
+    ports:
+      - 4000:4000
+    command: bash -c "apt-get update && apt-get -y install inotify-tools && mix local.hex --force && mix local.rebar --force && mix setup  && mix phx.server"
+    links:
+      - db_truckee
+
+  db_truckee:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+
